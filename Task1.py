@@ -1,6 +1,12 @@
-#Calculate Factoral Using a Function.
+# Calculate Factorial Using Recursion
+num = int(input("Enter a number: "))
 
-import math
-num=int(input("Enter a Number :"))
-fact=math.factorial(num)
+def factorial(n):
+    if n == 0 or n == 1:  # Base case
+        return 1
+    else:
+        return n * factorial(n - 1)  # Recursive call
+
+fact = factorial(num)
+
 print("Factorial of" ,num , "is:",fact)
